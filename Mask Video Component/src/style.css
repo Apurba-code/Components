@@ -1,0 +1,43 @@
+.mask-box {
+  border: 1px solid white;
+  cursor: none;
+  /* Hide default cursor to use custom one */
+  /* transition: all 0.1s cubic-bezier(0.215, 0.610, 0.355, 1); */
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+#mouse-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+  overflow: hidden;
+}
+
+#mouse-follower.expanded {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+}

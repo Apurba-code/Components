@@ -1,0 +1,63 @@
+ @font-face {
+      font-family: 'rock';
+      src: url(./rockybilly.regular.ttf);
+    }
+    @font-face {
+      font-family: 'space';
+      src: url(./SpaceGrotesk-VariableFont_wght.ttf);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'space', sans-serif;
+    }
+    .emni{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: thistle;
+    }
+ 
+ .marquee{
+      position: relative;
+      background-color: black;
+      color: #eee;
+      padding: 30px 0;
+      overflow: hidden;
+      font-size: 60px;
+      z-index: 50;
+    }
+    .marquee__inner{
+      display: flex;
+      width: fit-content;
+      flex: auto;
+      flex-direction: row;
+    }
+    .marquee__part{
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 0 4px;
+    }
+    .arrow{
+      margin: 0 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(180deg);
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .arrow.active{
+      transform: rotate(0deg);
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }

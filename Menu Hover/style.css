@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gridular";
+    src: url("BwGradualDEMO-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RMNeue";
+    src: url("Dirtyline\ 36daysoftype\ 2022.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.textBox {
+    font-size: 4vw;
+    line-height: 170%;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: "Gridular";
+}
+
+span {
+    font-family: "RMNeue";
+}
+
+.container {
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+.imgContainer {
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    overflow: hidden;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 9% 100%, 0 89%, 0 11%);
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-color: #f700ff91;
+}
+
+.imgBlocks {
+    position: absolute;
+    display: grid;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blocks {
+    opacity: 0;
+    mix-blend-mode: hard-light;
+    background-color: #f9f5ad;
+    transition: opacity 0.3s ease-in;
+}
+
+.blocks.active {
+    opacity: 0.65;
+}

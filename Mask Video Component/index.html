@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mask Image</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <div class="hero h-screen w-full bg-black">
+    <video id="clip-video" src="./public/1.mp4" muted autoplay loop class="hidden"></video>
+
+    <div class="mask-box fixed w-[60vw] h-[35vw] top-[10vh] left-[10vw]">
+      <canvas></canvas>
+    </div>
+
+    <div class="mask-box fixed w-[20vw] h-[9vw] top-[5vh] left-[5vw]">
+      <canvas></canvas>
+    </div>
+
+    <div class="mask-box fixed w-[35vw] h-[19vw] top-[5vh] right-[5vw]">
+      <canvas></canvas>
+    </div>
+
+    <div class="mask-box fixed w-[45vw] h-[30vw] top-[45vh] right-[5vw]">
+      <canvas></canvas>
+    </div>
+
+    <div class="mask-box fixed w-[38vw] h-[22vw] top-[50vh] left-[5vw]">
+      <canvas></canvas>
+    </div>
+
+
+
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
